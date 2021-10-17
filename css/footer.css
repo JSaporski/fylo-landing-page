@@ -1,0 +1,153 @@
+/* FOOTER */
+
+.footer {
+  padding: 100px 0 80px 0;
+  background: var(--very-dark-blue);
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: minmax(400px, 1fr) repeat(3, 1fr);
+}
+
+.logo-footer,
+.phone,
+.email {
+  margin: 0 0 0 20px;
+}
+
+.logo-footer {
+  grid-column: 1 / 2;
+}
+
+.phone {
+  grid-row: 2 / 3;
+}
+
+.email {
+  grid-row: 3 / 4;
+}
+
+.phone,
+.email {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  align-self: flex-start;
+}
+
+.phone {
+  align-self: flex-end;
+  margin-bottom: 25px;
+}
+
+.phone span,
+.email span {
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.phone img,
+.email img {
+  width: 16px;
+}
+
+.other-links-1 li + li,
+.other-links-2 li + li {
+  margin-top: 12px;
+}
+
+.other-links-1 li a,
+.other-links-2 li a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.other-links-1 li a:hover,
+.other-links-2 li a:hover {
+  color: var(--bright-blue);
+  transition: 0.3s ease-out;
+}
+
+.other-links-1,
+.other-links-2,
+.social {
+  grid-row: 2 / 4;
+}
+
+.social {
+  margin: 0 20px 0 0;
+  display: flex;
+  gap: 15px;
+}
+
+.social a {
+  align-self: flex-start;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transition: 0.3s ease-out;
+}
+
+.social a img {
+  width: 14px;
+  height: 14px;
+}
+
+.social a:hover {
+  border-color: var(--bright-blue);
+  background: var(--bright-blue);
+}
+
+@media only screen and (max-width: 860px) {
+  .footer .container {
+    max-width: 600px;
+    grid-template-columns: auto;
+  }
+
+  .logo-footer,
+  .phone,
+  .email,
+  .other-links-1,
+  .other-links-2,
+  .social {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .logo-footer {
+    margin-bottom: 30px;
+  }
+
+  .phone {
+    margin-bottom: 10px;
+  }
+
+  .other-links-1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .other-links-1,
+  .other-links-2 {
+    margin-left: 20px;
+  }
+
+  .other-links-1 li + li,
+  .other-links-2 li + li {
+    margin-top: 10px;
+  }
+
+  .other-links-1 li a,
+  .other-links-2 li a {
+    font-size: 0.875em;
+  }
+
+  .social {
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
